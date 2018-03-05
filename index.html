@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+  <style>
+    *{margin: 0;padding: 0}
+    *{box-sizing: border-box}
+    .window{
+        width: 250px;
+        height: 250px;
+        margin: 20px auto;
+        overflow: hidden;
+    }
+    .images{
+      /* display: flex; */
+      position: relative;
+    }
+    .images > img {
+      width: 100%;
+      transition: all 0.5s;
+      /* 绝对定位 */
+      position: absolute;
+      top: 0;
+    }
+    /* 当前 */
+    .images > img.current{ 
+      left: 0;
+      transform: translateY(0);
+      z-index: 1;
+    }
+    /* 移动开 */
+    .images > img.leave{
+      transform: translateY(-100%);
+      z-index: 1;
+    }
+    /* 移动入 */
+    .images > img.enter{
+      transform: translateY(100%);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="window">
+    <div class="images">
+      <img src="images/1.png" alt="图片" width="250" height="250">
+      <img src="images/2.png" alt="图片" width="250" height="250">
+      <img src="images/3.png" alt="图片" width="250" height="250">
+      <img src="images/4.png" alt="图片" width="250" height="250">
+      <img src="images/5.png" alt="图片" width="250" height="250">
+    </div>
+  </div>
+</body>
+
+</html>
+
+
+<script src="jquery-3.2.1.min.js"></script>
+<script src="main.js"></script>
+
+</html>
